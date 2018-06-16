@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/registrations' do
-
+    @user = User.create(name: params[:name])
     redirect '/users/home'
   end
 
